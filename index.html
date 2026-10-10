@@ -2,1464 +2,1662 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#160c25">
-<meta name="description" content="VIOLET RIOT — premium hair, individual style, no rules. Shop bundles, wigs, ponytails and accessories.">
-<title>VIOLET RIOT® — Define Your Look</title>
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
-
-<style>
-:root {
-  --bg: #160c25;
-  --panel: #211333;
-  --purple: #8b35ff;
-  --violet: #b18aff;
-  --lavender: #e0d2ff;
-  --white: #f8f5ff;
-  --muted: #b9aec9;
-  --lime: #d7ff65;
-  --border: rgba(224,210,255,.2);
-  --max: 1380px;
-}
-
-* { box-sizing: border-box; }
-
-html { scroll-behavior: smooth; }
-
-body {
-  margin: 0;
-  background: var(--bg);
-  color: var(--white);
-  font-family: "DM Sans", sans-serif;
-}
-
-a { color: inherit; text-decoration: none; }
-button, input { font: inherit; }
-button { cursor: pointer; }
-img { display: block; max-width: 100%; }
-
-::selection {
-  background: var(--violet);
-  color: var(--bg);
-}
-
-.announcement {
-  background: var(--purple);
-  color: white;
-  text-align: center;
-  padding: 10px 14px;
-  font-size: 9px;
-  font-weight: 900;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-}
-
-.announcement span {
-  color: var(--lime);
-  padding: 0 10px;
-}
-
-header {
-  position: sticky;
-  top: 0;
-  z-index: 50;
-  background: rgba(22,12,37,.94);
-  backdrop-filter: blur(16px);
-  border-bottom: 1px solid var(--border);
-}
-
-.nav {
-  max-width: var(--max);
-  min-height: 82px;
-  margin: auto;
-  padding: 15px 5%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 22px;
-}
-
-.logo {
-  font-family: "Space Grotesk", sans-serif;
-  font-size: 30px;
-  font-weight: 700;
-  letter-spacing: -2px;
-  line-height: .9;
-}
-
-.logo span { color: var(--violet); }
-
-.logo small {
-  display: block;
-  margin-top: 7px;
-  font: 700 8px "DM Sans", sans-serif;
-  color: var(--muted);
-  letter-spacing: 3px;
-}
-
-.navlinks {
-  display: flex;
-  align-items: center;
-  gap: 27px;
-}
-
-.navlinks a {
-  font-size: 10px;
-  color: var(--muted);
-  text-transform: uppercase;
-  letter-spacing: 1.1px;
-  font-weight: 800;
-  transition: color .2s;
-}
-
-.navlinks a:hover { color: white; }
-
-.bag-button {
-  background: transparent;
-  color: white;
-  border: 1px solid var(--violet);
-  padding: 12px 15px;
-  font-size: 10px;
-  font-weight: 900;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  transition: background .2s;
-}
-
-.bag-button:hover {
-  background: var(--purple);
-}
-
-/* HERO */
-
-.hero {
-  position: relative;
-  overflow: hidden;
-  background:
-    radial-gradient(ellipse at 78% 45%,rgba(139,53,255,.25),transparent 40%),
-    var(--bg);
-  border-bottom: 1px solid var(--border);
-}
-
-.hero-inner {
-  max-width: var(--max);
-  min-height: 650px;
-  margin: auto;
-  padding: 75px 5%;
-  display: grid;
-  grid-template-columns: 1.05fr .95fr;
-  align-items: center;
-  gap: 30px;
-}
-
-.eyebrow {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  color: var(--violet);
-  font-size: 10px;
-  font-weight: 900;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-}
-
-.eyebrow::before {
-  content: "";
-  width: 28px;
-  height: 2px;
-  background: var(--violet);
-}
-
-.hero h1 {
-  margin: 27px 0;
-  font-family: "Space Grotesk", sans-serif;
-  font-size: clamp(65px,9.7vw,140px);
-  line-height: .79;
-  font-weight: 700;
-  letter-spacing: -.095em;
-  text-transform: uppercase;
-}
-
-.hero h1 .outline {
-  color: transparent;
-  -webkit-text-stroke: 1.5px var(--violet);
-}
-
-.hero-copy {
-  max-width: 390px;
-  color: var(--muted);
-  font-size: 14px;
-  line-height: 1.9;
-  margin: 0 0 30px;
-}
-
-.actions {
-  display: flex;
-  gap: 15px;
-  flex-wrap: wrap;
-  align-items: center;
-}
-
-.primary-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 24px;
-  background: var(--violet);
-  color: var(--bg);
-  border: 1px solid var(--violet);
-  padding: 16px 19px;
-  font-size: 10px;
-  font-weight: 900;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  transition: background .2s, color .2s;
-}
-
-.primary-btn:hover {
-  background: var(--white);
-  border-color: var(--white);
-}
-
-.text-link {
-  font-size: 10px;
-  font-weight: 800;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  color: var(--muted);
-}
-
-.text-link:hover { color: white; }
-
-.hero-visual {
-  min-height: 440px;
-  position: relative;
-  display: grid;
-  place-items: center;
-}
-
-.hero-photo {
-  position: absolute;
-  width: 76%;
-  height: 410px;
-  object-fit: cover;
-  filter: saturate(.7) contrast(1.05);
-  border: 1px solid rgba(224,210,255,.3);
-}
-
-.photo-overlay {
-  position: absolute;
-  width: 76%;
-  height: 410px;
-  background: linear-gradient(180deg,transparent 35%,rgba(22,12,37,.85));
-}
-
-.hero-tag {
-  position: absolute;
-  left: 0;
-  top: 13%;
-  background: var(--lime);
-  color: var(--bg);
-  padding: 12px 15px;
-  font-size: 9px;
-  font-weight: 900;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  transform: rotate(-4deg);
-}
-
-.hero-number {
-  position: absolute;
-  right: 0;
-  bottom: 10%;
-  font: 700 clamp(55px,8vw,105px) "Space Grotesk",sans-serif;
-  letter-spacing: -8px;
-  color: transparent;
-  -webkit-text-stroke: 1px var(--violet);
-}
-
-.hero-caption {
-  position: absolute;
-  bottom: 7%;
-  left: 15%;
-  z-index: 2;
-  font-size: 9px;
-  font-weight: 900;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-}
-
-/* RUNNING BRAND STRIP */
-
-.ticker {
-  overflow: hidden;
-  white-space: nowrap;
-  background: var(--purple);
-  padding: 15px 0;
-}
-
-.ticker-track {
-  display: flex;
-  width: max-content;
-  animation: move 28s linear infinite;
-}
-
-.ticker-track span {
-  font: 700 12px "Space Grotesk",sans-serif;
-  letter-spacing: 2px;
-  padding-right: 28px;
-}
-
-.ticker-track b {
-  color: var(--lime);
-  margin: 0 14px;
-}
-
-@keyframes move {
-  to { transform: translateX(-50%); }
-}
-
-/* COLLECTION */
-
-.section {
-  padding: 85px 5%;
-  border-bottom: 1px solid var(--border);
-}
-
-.section-inner {
-  max-width: var(--max);
-  margin: auto;
-}
-
-.section-heading {
-  display: flex;
-  align-items: end;
-  justify-content: space-between;
-  gap: 25px;
-  margin-bottom: 35px;
-}
-
-.kicker {
-  color: var(--violet);
-  font-size: 9px;
-  font-weight: 900;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  margin-bottom: 15px;
-}
-
-.section h2 {
-  margin: 0;
-  font: 700 clamp(40px,6vw,76px)/.9 "Space Grotesk",sans-serif;
-  letter-spacing: -.07em;
-  text-transform: uppercase;
-}
-
-.section h2 .light {
-  color: transparent;
-  -webkit-text-stroke: 1px var(--violet);
-}
-
-.section-intro {
-  max-width: 280px;
-  color: var(--muted);
-  font-size: 12px;
-  line-height: 1.8;
-}
-
-.filters {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  margin-bottom: 32px;
-}
-
-.filter {
-  border: 1px solid var(--border);
-  background: transparent;
-  color: var(--muted);
-  padding: 11px 15px;
-  font-size: 9px;
-  font-weight: 900;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  transition: .2s;
-}
-
-.filter:hover,
-.filter.active {
-  background: var(--violet);
-  color: var(--bg);
-  border-color: var(--violet);
-}
-
-.products {
-  display: grid;
-  grid-template-columns: repeat(4,minmax(0,1fr));
-  gap: 18px;
-}
-
-.product { min-width: 0; }
-
-.product-image {
-  height: 340px;
-  position: relative;
-  overflow: hidden;
-  background: var(--panel);
-  border: 1px solid var(--border);
-}
-
-.product-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  filter: saturate(.78);
-  transition: transform .5s, filter .4s;
-}
-
-.product:hover .product-image img {
-  transform: scale(1.05);
-  filter: saturate(1);
-}
-
-.product-label {
-  position: absolute;
-  left: 12px;
-  top: 12px;
-  background: var(--lime);
-  color: var(--bg);
-  padding: 8px 10px;
-  font-size: 8px;
-  font-weight: 900;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-}
-
-.product-index {
-  position: absolute;
-  bottom: 10px;
-  right: 12px;
-  color: white;
-  font: 700 12px "Space Grotesk",sans-serif;
-}
-
-.product-info { padding-top: 15px; }
-
-.product-meta {
-  display: flex;
-  justify-content: space-between;
-  align-items: start;
-  gap: 10px;
-}
-
-.product h3 {
-  margin: 0;
-  font-size: 12px;
-  line-height: 1.5;
-  font-weight: 900;
-  text-transform: uppercase;
-}
-
-.price {
-  white-space: nowrap;
-  font-size: 12px;
-  font-weight: 900;
-}
-
-.product-desc {
-  min-height: 38px;
-  color: var(--muted);
-  font-size: 11px;
-  line-height: 1.7;
-  margin: 9px 0 15px;
-}
-
-.add-btn {
-  width: 100%;
-  padding: 13px 10px;
-  border: 1px solid var(--border);
-  background: transparent;
-  color: white;
-  font-size: 9px;
-  font-weight: 900;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  transition: .2s;
-}
-
-.add-btn:hover {
-  background: var(--violet);
-  color: var(--bg);
-  border-color: var(--violet);
-}
-
-.product[hidden] { display: none; }
-
-/* BRAND STATEMENT */
-
-.manifesto {
-  background: var(--panel);
-}
-
-.manifesto-inner {
-  max-width: var(--max);
-  margin: auto;
-  display: grid;
-  grid-template-columns: .9fr 1.1fr;
-  align-items: center;
-  gap: 70px;
-}
-
-.manifesto-art {
-  min-height: 390px;
-  position: relative;
-  overflow: hidden;
-  background: var(--purple);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.manifesto-art::before,
-.manifesto-art::after {
-  content: "";
-  position: absolute;
-  width: 260px;
-  height: 260px;
-  border: 1px solid rgba(255,255,255,.45);
-  border-radius: 50%;
-}
-
-.manifesto-art::after {
-  width: 340px;
-  height: 340px;
-}
-
-.manifesto-symbol {
-  position: relative;
-  z-index: 1;
-  font: 700 clamp(90px,13vw,170px) "Space Grotesk",sans-serif;
-  letter-spacing: -12px;
-  color: var(--white);
-}
-
-.manifesto-copy h2 { margin-bottom: 27px; }
-
-.manifesto-copy p {
-  max-width: 500px;
-  color: var(--muted);
-  font-size: 13px;
-  line-height: 2;
-}
-
-.manifesto-copy .primary-btn { margin-top: 15px; }
-
-/* VALUE POINTS */
-
-.values {
-  display: grid;
-  grid-template-columns: repeat(3,1fr);
-  border-bottom: 1px solid var(--border);
-}
-
-.value {
-  padding: 35px 7%;
-  border-right: 1px solid var(--border);
-}
-
-.value:last-child { border-right: 0; }
-
-.value-index {
-  color: var(--violet);
-  font: 700 12px "Space Grotesk",sans-serif;
-  margin-bottom: 22px;
-}
-
-.value h3 {
-  font: 700 20px "Space Grotesk",sans-serif;
-  text-transform: uppercase;
-  letter-spacing: -.5px;
-}
-
-.value p {
-  color: var(--muted);
-  font-size: 11px;
-  line-height: 1.8;
-}
-
-/* NEWSLETTER */
-
-.newsletter {
-  padding: 80px 5%;
-  background: var(--purple);
-}
-
-.newsletter-inner {
-  max-width: 1050px;
-  margin: auto;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  align-items: center;
-  gap: 45px;
-}
-
-.newsletter .kicker { color: var(--lime); }
-
-.newsletter h2 {
-  font: 700 clamp(42px,6.5vw,76px)/.88 "Space Grotesk",sans-serif;
-  letter-spacing: -.075em;
-  text-transform: uppercase;
-  margin: 0 0 20px;
-}
-
-.newsletter h2 span { color: var(--lime); }
-
-.newsletter p {
-  color: #e4d5ff;
-  font-size: 12px;
-  line-height: 1.9;
-  max-width: 400px;
-}
-
-.newsletter-form {
-  display: flex;
-  border-bottom: 1px solid white;
-}
-
-.newsletter-form input {
-  flex: 1;
-  min-width: 0;
-  padding: 15px 0;
-  border: 0;
-  outline: 0;
-  color: white;
-  background: transparent;
-  font-size: 12px;
-}
-
-.newsletter-form input::placeholder { color: #d1b9ff; }
-
-.newsletter-form button {
-  padding: 12px 16px;
-  border: 0;
-  background: var(--lime);
-  color: var(--bg);
-  font-size: 9px;
-  font-weight: 900;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-}
-
-.form-note {
-  color: #e4d5ff;
-  font-size: 10px;
-  line-height: 1.7;
-  margin-top: 12px;
-}
-
-/* FOOTER */
-
-footer {
-  padding: 35px 5%;
-  background: #0d0715;
-}
-
-.footer-inner {
-  max-width: var(--max);
-  margin: auto;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-  gap: 20px;
-}
-
-.footer-logo {
-  font: 700 30px "Space Grotesk",sans-serif;
-  letter-spacing: -2px;
-}
-
-.footer-logo span { color: var(--violet); }
-
-.footer-links {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-}
-
-.footer-links a {
-  color: var(--muted);
-  font-size: 9px;
-  font-weight: 800;
-  text-transform: uppercase;
-}
-
-.footer-links a:hover { color: white; }
-
-.footer-bottom {
-  width: 100%;
-  border-top: 1px solid var(--border);
-  padding-top: 18px;
-  margin-top: 10px;
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 12px;
-  color: var(--muted);
-  font-size: 9px;
-  letter-spacing: .5px;
-}
-
-/* BAG DRAWER */
-
-.backdrop {
-  display: none;
-  position: fixed;
-  z-index: 70;
-  inset: 0;
-  background: rgba(0,0,0,.65);
-}
-
-.backdrop.show { display: block; }
-
-.cart-panel {
-  position: fixed;
-  z-index: 80;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  width: min(420px,100%);
-  display: flex;
-  flex-direction: column;
-  padding: 25px;
-  background: var(--panel);
-  border-left: 1px solid var(--border);
-  transform: translateX(105%);
-  transition: transform .3s;
-}
-
-.cart-panel.open { transform: translateX(0); }
-
-.cart-head {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding-bottom: 20px;
-  border-bottom: 1px solid var(--border);
-}
-
-.cart-head h2 {
-  margin: 0;
-  font: 700 27px "Space Grotesk",sans-serif;
-}
-
-.close-cart {
-  padding: 9px 12px;
-  border: 1px solid var(--violet);
-  background: transparent;
-  color: white;
-  font-size: 9px;
-  font-weight: 900;
-}
-
-.cart-items {
-  flex: 1;
-  overflow-y: auto;
-  padding: 15px 0;
-}
-
-.cart-empty {
-  color: var(--muted);
-  font-size: 13px;
-  line-height: 1.8;
-}
-
-.cart-row {
-  display: flex;
-  justify-content: space-between;
-  gap: 15px;
-  padding: 16px 0;
-  border-bottom: 1px solid var(--border);
-  font-size: 11px;
-  line-height: 1.6;
-}
-
-.remove-btn {
-  display: block;
-  border: 0;
-  background: none;
-  color: var(--violet);
-  padding: 7px 0;
-  font-size: 10px;
-  text-decoration: underline;
-}
-
-.cart-total {
-  border-top: 1px solid var(--border);
-  padding-top: 20px;
-}
-
-.total-line {
-  display: flex;
-  justify-content: space-between;
-  font-weight: 900;
-  font-size: 12px;
-  margin-bottom: 17px;
-}
-
-.checkout-btn {
-  width: 100%;
-  border: 0;
-  padding: 16px;
-  background: var(--violet);
-  color: var(--bg);
-  font-size: 10px;
-  font-weight: 900;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-
-.checkout-note {
-  color: var(--muted);
-  font-size: 10px;
-  line-height: 1.7;
-}
-
-.toast {
-  position: fixed;
-  z-index: 100;
-  right: 20px;
-  bottom: 20px;
-  max-width: calc(100% - 40px);
-  padding: 15px 20px;
-  background: var(--lime);
-  color: var(--bg);
-  font-size: 11px;
-  font-weight: 900;
-  box-shadow: 0 6px 25px #0004;
-  transform: translateY(150%);
-  transition: transform .3s;
-}
-
-.toast.show { transform: translateY(0); }
-
-@media(max-width:950px) {
-  .hero-inner { grid-template-columns: 1fr .9fr; }
-  .hero-visual { min-height: 350px; }
-  .hero-photo, .photo-overlay { height: 340px; }
-  .products { grid-template-columns: repeat(2,minmax(0,1fr)); }
-  .product-image { height: clamp(230px,42vw,350px); }
-  .manifesto-inner { gap: 35px; }
-}
-
-@media(max-width:650px) {
-  .nav {
-    min-height: 70px;
-    padding: 12px 5%;
-  }
-
-  .logo { font-size: 25px; }
-  .logo small { font-size: 7px; letter-spacing: 2px; }
-  .navlinks { display: none; }
-  .bag-button { padding: 10px; }
-
-  .hero-inner {
-    padding-top: 55px;
-    padding-bottom: 45px;
-    grid-template-columns: 1fr;
-    gap: 20px;
-  }
-
-  .hero h1 { font-size: clamp(70px,15vw,105px); }
-  .hero-copy { font-size: 13px; }
-  .hero-visual { min-height: 340px; }
-  .hero-photo, .photo-overlay { height: 320px; width: 82%; }
-  .hero-caption { left: 8%; bottom: 7%; }
-  .hero-tag { left: 1%; }
-
-  .section { padding: 60px 5%; }
-  .section-heading { align-items: start; flex-direction: column; gap: 10px; }
-  .section-intro { max-width: 370px; }
-  .products { gap: 25px 12px; }
-  .product-image { height: clamp(180px,56vw,290px); }
-  .product h3, .price { font-size: 10px; }
-  .product-desc { font-size: 10px; }
-  .product-label { left: 7px; top: 7px; font-size: 7px; padding: 7px; }
-  .add-btn { padding: 12px 5px; font-size: 8px; }
-
-  .manifesto-inner { grid-template-columns: 1fr; }
-  .manifesto-art { min-height: 270px; }
-
-  .values { grid-template-columns: 1fr; }
-  .value {
-    border-right: 0;
-    border-bottom: 1px solid var(--border);
-    padding: 25px 5%;
-  }
-
-  .value:last-child { border-bottom: 0; }
-
-  .newsletter-inner { grid-template-columns: 1fr; gap: 20px; }
-  .footer-inner { align-items: flex-start; }
-  .footer-bottom { flex-direction: column; }
-}
-
-@media(prefers-reduced-motion:reduce) {
-  *,*::before,*::after {
-    animation: none !important;
-    scroll-behavior: auto !important;
-    transition: none !important;
-  }
-}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#160d20">
+
+  <title>VIOLET RIOT | Braids, Twists & Protective Styles</title>
+
+  <meta name="description"
+    content="Discover your next look with VIOLET RIOT. Professional braids, twists, cornrows and protective hairstyling tailored to your individual style.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #160d20;
+      --surface: #21132d;
+      --surface-light: #2b1a3b;
+      --purple: #a855f7;
+      --purple-light: #c084fc;
+      --lavender: #ead7ff;
+      --white: #fffaff;
+      --muted: #b9a9c6;
+      --lime: #d4ff65;
+      --border: rgba(255,255,255,.12);
+      --radius: 20px;
+      --max-width: 1200px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 90px;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--white);
+      font-family: "DM Sans", sans-serif;
+      line-height: 1.6;
+    }
+
+    body, button, input, select, textarea {
+      font-family: "DM Sans", sans-serif;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      object-fit: cover;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button, input, select, textarea {
+      font: inherit;
+    }
+
+    button, a, select {
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    button {
+      cursor: pointer;
+    }
+
+    .container {
+      width: min(var(--max-width), 90%);
+      margin: 0 auto;
+    }
+
+    .eyebrow {
+      color: var(--lime);
+      font-size: .75rem;
+      font-weight: 800;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+    }
+
+    h1, h2, h3, .logo {
+      font-family: "Space Grotesk", sans-serif;
+      line-height: 1.08;
+    }
+
+    h2 {
+      font-size: clamp(2rem, 4vw, 3.5rem);
+      letter-spacing: -.055em;
+    }
+
+    .section {
+      padding: 100px 0;
+    }
+
+    .section-heading {
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+      gap: 24px;
+      margin-bottom: 38px;
+    }
+
+    .section-heading p {
+      max-width: 420px;
+      color: var(--muted);
+      margin-top: 14px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      min-height: 50px;
+      padding: 13px 22px;
+      border: 1px solid transparent;
+      border-radius: 8px;
+      background: var(--purple);
+      color: white;
+      font-weight: 800;
+      transition: .2s ease;
+    }
+
+    .btn:hover {
+      background: var(--purple-light);
+      color: var(--bg);
+      transform: translateY(-2px);
+    }
+
+    .btn-outline {
+      background: transparent;
+      border-color: var(--border);
+    }
+
+    .btn-outline:hover {
+      border-color: var(--purple-light);
+      color: white;
+      background: var(--surface);
+    }
+
+    /* NAVIGATION */
+
+    .navbar {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: rgba(22,13,32,.92);
+      backdrop-filter: blur(18px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav-inner {
+      min-height: 76px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .logo {
+      font-size: 1.45rem;
+      font-weight: 700;
+      letter-spacing: -.06em;
+      white-space: nowrap;
+    }
+
+    .logo span {
+      color: var(--purple-light);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 26px;
+      list-style: none;
+      font-size: .88rem;
+      font-weight: 600;
+      color: var(--muted);
+    }
+
+    .nav-links a:hover {
+      color: var(--white);
+    }
+
+    .menu-toggle {
+      display: none;
+      background: transparent;
+      color: white;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 8px 12px;
+      font-size: 1.2rem;
+    }
+
+    /* HERO */
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      padding: 90px 0 85px;
+      background:
+        radial-gradient(ellipse at 5% 20%, rgba(168,85,247,.17), transparent 42%),
+        radial-gradient(ellipse at 95% 85%, rgba(116,42,180,.18), transparent 40%);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.05fr .95fr;
+      align-items: center;
+      gap: 58px;
+    }
+
+    .hero h1 {
+      font-size: clamp(3.2rem, 7vw, 6.7rem);
+      letter-spacing: -.085em;
+      margin: 22px 0;
+    }
+
+    .hero h1 span {
+      color: var(--purple-light);
+    }
+
+    .hero-copy {
+      color: var(--muted);
+      max-width: 480px;
+      font-size: 1.05rem;
+      margin-bottom: 28px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .hero-note {
+      margin-top: 28px;
+      color: var(--muted);
+      font-size: .8rem;
+    }
+
+    .hero-note strong {
+      color: var(--lime);
+    }
+
+    .hero-visual {
+      position: relative;
+      min-height: 480px;
+    }
+
+    .hero-image {
+      position: absolute;
+      inset: 0 22px 0 20px;
+      height: 100%;
+      border-radius: 48% 48% 15px 15px;
+      border: 1px solid rgba(255,255,255,.18);
+    }
+
+    .hero-label {
+      position: absolute;
+      right: 0;
+      bottom: 35px;
+      max-width: 220px;
+      padding: 18px;
+      background: var(--lime);
+      color: var(--bg);
+      border-radius: 12px;
+      font-weight: 800;
+      box-shadow: 0 12px 40px rgba(0,0,0,.25);
+    }
+
+    .hero-label small {
+      display: block;
+      margin-top: 5px;
+      font-weight: 500;
+    }
+
+    /* MARQUEE */
+
+    .marquee {
+      overflow: hidden;
+      background: var(--purple);
+      color: white;
+      padding: 17px 0;
+    }
+
+    .marquee-track {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      gap: 32px;
+      min-width: max-content;
+      font-family: "Space Grotesk", sans-serif;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .09em;
+    }
+
+    .marquee-track span::after {
+      content: " ✳";
+      color: var(--lime);
+      padding-left: 28px;
+    }
+
+    /* SERVICES */
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .service-card {
+      overflow: hidden;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      background: var(--surface);
+      transition: transform .25s, border-color .25s;
+    }
+
+    .service-card:hover {
+      transform: translateY(-6px);
+      border-color: var(--purple-light);
+    }
+
+    .service-image {
+      height: 270px;
+      background: var(--surface-light);
+    }
+
+    .service-body {
+      padding: 24px;
+    }
+
+    .service-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: start;
+      gap: 10px;
+      margin-bottom: 12px;
+    }
+
+    .service-top h3 {
+      font-size: 1.4rem;
+    }
+
+    .price {
+      color: var(--lime);
+      font-weight: 800;
+      white-space: nowrap;
+    }
+
+    .service-body p {
+      min-height: 70px;
+      color: var(--muted);
+      font-size: .92rem;
+    }
+
+    .service-meta {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      margin: 18px 0;
+      padding-top: 14px;
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      font-size: .8rem;
+    }
+
+    .service-body .btn {
+      width: 100%;
+    }
+
+    .price-note {
+      margin-top: 24px;
+      color: var(--muted);
+      font-size: .85rem;
+    }
+
+    /* ABOUT */
+
+    .about {
+      background: var(--surface);
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: .9fr 1.1fr;
+      gap: 65px;
+      align-items: center;
+    }
+
+    .about-image-wrap {
+      position: relative;
+    }
+
+    .about-image {
+      height: 480px;
+      border-radius: var(--radius);
+    }
+
+    .about-stamp {
+      position: absolute;
+      bottom: -20px;
+      right: -18px;
+      display: grid;
+      place-content: center;
+      width: 125px;
+      height: 125px;
+      border-radius: 50%;
+      background: var(--purple);
+      text-align: center;
+      font-family: "Space Grotesk", sans-serif;
+      font-weight: 700;
+      transform: rotate(8deg);
+    }
+
+    .about-copy h2 {
+      margin: 18px 0;
+    }
+
+    .about-copy > p {
+      color: var(--muted);
+      margin-bottom: 18px;
+    }
+
+    .values {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      margin: 28px 0;
+    }
+
+    .value {
+      border-top: 1px solid var(--border);
+      padding-top: 16px;
+    }
+
+    .value strong {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    .value span {
+      color: var(--muted);
+      font-size: .85rem;
+    }
+
+    /* GALLERY */
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-auto-rows: 230px;
+      gap: 14px;
+    }
+
+    .gallery-item {
+      overflow: hidden;
+      border-radius: 14px;
+      position: relative;
+      background: var(--surface);
+    }
+
+    .gallery-item:first-child {
+      grid-row: span 2;
+    }
+
+    .gallery-item img {
+      height: 100%;
+      transition: transform .5s;
+    }
+
+    .gallery-item:hover img {
+      transform: scale(1.06);
+    }
+
+    .gallery-caption {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 35px 14px 14px;
+      background: linear-gradient(transparent, rgba(0,0,0,.85));
+      font-weight: 700;
+    }
+
+    /* BOOKING */
+
+    .booking {
+      background:
+        radial-gradient(ellipse at 95% 10%, rgba(168,85,247,.2), transparent 45%),
+        var(--surface);
+    }
+
+    .booking-grid {
+      display: grid;
+      grid-template-columns: .75fr 1.25fr;
+      gap: 55px;
+      align-items: start;
+    }
+
+    .booking-intro h2 {
+      margin: 18px 0;
+    }
+
+    .booking-intro p {
+      color: var(--muted);
+      margin-bottom: 22px;
+    }
+
+    .booking-info {
+      padding: 18px 0;
+      border-top: 1px solid var(--border);
+    }
+
+    .booking-info strong {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    .booking-info span {
+      color: var(--muted);
+      font-size: .9rem;
+    }
+
+    .booking-form {
+      padding: 30px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      background: var(--bg);
+    }
+
+    .form-heading {
+      margin-bottom: 24px;
+    }
+
+    .form-heading h3 {
+      font-size: 1.6rem;
+      margin-bottom: 8px;
+    }
+
+    .form-heading p {
+      color: var(--muted);
+      font-size: .9rem;
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+    }
+
+    .field {
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+      margin-bottom: 18px;
+    }
+
+    .field.full {
+      grid-column: 1 / -1;
+    }
+
+    .field label {
+      font-size: .85rem;
+      font-weight: 700;
+    }
+
+    .field input,
+    .field select,
+    .field textarea {
+      width: 100%;
+      padding: 13px 14px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background: var(--surface);
+      color: var(--white);
+      outline: none;
+    }
+
+    .field input:focus,
+    .field select:focus,
+    .field textarea:focus {
+      border-color: var(--purple-light);
+    }
+
+    .field select option {
+      background: var(--surface);
+    }
+
+    .field textarea {
+      min-height: 100px;
+      resize: vertical;
+    }
+
+    .form-submit {
+      width: 100%;
+      border: none;
+    }
+
+    .form-disclaimer {
+      margin-top: 13px;
+      color: var(--muted);
+      font-size: .78rem;
+    }
+
+    .form-status {
+      margin-top: 16px;
+      padding: 12px;
+      border-radius: 8px;
+      background: var(--surface-light);
+      color: var(--lavender);
+      font-size: .9rem;
+      display: none;
+    }
+
+    /* FAQ */
+
+    .faq-list {
+      max-width: 820px;
+      margin: 0 auto;
+    }
+
+    .faq-item {
+      border-bottom: 1px solid var(--border);
+    }
+
+    .faq-question {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      width: 100%;
+      padding: 23px 0;
+      border: none;
+      background: none;
+      color: var(--white);
+      text-align: left;
+      font-weight: 700;
+      font-size: 1rem;
+    }
+
+    .faq-question span:last-child {
+      color: var(--purple-light);
+      font-size: 1.3rem;
+    }
+
+    .faq-answer {
+      display: none;
+      color: var(--muted);
+      padding: 0 0 22px;
+    }
+
+    .faq-item.open .faq-answer {
+      display: block;
+    }
+
+    /* FOOTER */
+
+    .footer {
+      padding: 55px 0 25px;
+      border-top: 1px solid var(--border);
+    }
+
+    .footer-main {
+      display: flex;
+      justify-content: space-between;
+      gap: 35px;
+      flex-wrap: wrap;
+      padding-bottom: 35px;
+    }
+
+    .footer-brand {
+      max-width: 340px;
+    }
+
+    .footer-brand p {
+      margin-top: 14px;
+      color: var(--muted);
+      font-size: .9rem;
+    }
+
+    .footer-links h4 {
+      margin-bottom: 14px;
+    }
+
+    .footer-links a {
+      display: block;
+      color: var(--muted);
+      margin: 8px 0;
+      font-size: .9rem;
+    }
+
+    .footer-links a:hover {
+      color: var(--purple-light);
+    }
+
+    .footer-bottom {
+      padding-top: 20px;
+      border-top: 1px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      gap: 15px;
+      flex-wrap: wrap;
+      color: var(--muted);
+      font-size: .8rem;
+    }
+
+    /* RESPONSIVE */
+
+    @media (max-width: 900px) {
+      .hero-grid {
+        gap: 30px;
+      }
+
+      .hero-visual {
+        min-height: 400px;
+      }
+
+      .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .about-grid,
+      .booking-grid {
+        grid-template-columns: 1fr;
+        gap: 45px;
+      }
+
+      .about-image-wrap {
+        max-width: 580px;
+      }
+
+      .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 650px) {
+      .section {
+        padding: 70px 0;
+      }
+
+      .nav-inner {
+        min-height: 68px;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 68px;
+        left: 0;
+        right: 0;
+        padding: 22px 5%;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        background: var(--bg);
+        border-bottom: 1px solid var(--border);
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+
+      .nav-links li a {
+        display: block;
+        padding: 12px 0;
+      }
+
+      .nav-cta {
+        display: none;
+      }
+
+      .hero {
+        padding: 65px 0;
+      }
+
+      .hero-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero h1 {
+        font-size: clamp(3.3rem, 15vw, 5rem);
+      }
+
+      .hero-visual {
+        min-height: 380px;
+        margin-top: 12px;
+      }
+
+      .section-heading {
+        align-items: start;
+        flex-direction: column;
+      }
+
+      .services-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .service-image {
+        height: 300px;
+      }
+
+      .service-body p {
+        min-height: auto;
+      }
+
+      .about-image {
+        height: 370px;
+      }
+
+      .about-stamp {
+        width: 100px;
+        height: 100px;
+        right: -8px;
+      }
+
+      .gallery-grid {
+        grid-auto-rows: 180px;
+        gap: 10px;
+      }
+
+      .booking-form {
+        padding: 20px;
+      }
+
+      .form-grid {
+        grid-template-columns: 1fr;
+        gap: 0;
+      }
+
+      .field.full {
+        grid-column: auto;
+      }
+
+      .marquee-track {
+        justify-content: flex-start;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *, *::before, *::after {
+        transition-duration: .01ms !important;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-<div class="announcement">
-  THE NEW STANDARD <span>✳</span>
-  FREE US SHIPPING OVER $100 <span>✳</span>
-  STYLE WITHOUT LIMITS
-</div>
+  <!-- NAVIGATION -->
+  <header class="navbar">
+    <div class="container nav-inner">
+      <a href="#home" class="logo">VIOLET<span>RIOT.</span></a>
 
-<header>
-  <nav class="nav" aria-label="Main navigation">
-    <a class="logo" href="#home" aria-label="Violet Riot home">
-      VIOLET <span>RIOT®</span>
-      <small>HAIR / IDENTITY / EXPRESSION</small>
-    </a>
+      <button class="menu-toggle"
+        id="menuToggle"
+        aria-label="Open navigation"
+        aria-expanded="false">
+        ☰
+      </button>
 
-    <div class="navlinks">
-      <a href="#shop">Shop</a>
-      <a href="#about">The concept</a>
-      <a href="#values">Our standard</a>
+      <nav aria-label="Main navigation">
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#gallery">Our Work</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#faq">FAQs</a></li>
+        </ul>
+      </nav>
+
+      <a href="#booking" class="btn nav-cta">Book a Style ↗</a>
     </div>
+  </header>
 
-    <button class="bag-button" id="openCart">
-      BAG [<span id="bagCount">0</span>]
-    </button>
-  </nav>
-</header>
+  <main>
 
-<main>
+    <!-- HERO -->
+    <section class="hero" id="home">
+      <div class="container hero-grid">
 
-<section class="hero" id="home">
-  <div class="hero-inner">
-    <div>
-      <div class="eyebrow">Hair is personal. Make it yours.</div>
+        <div>
+          <div class="eyebrow">Individual style. Expert hands.</div>
 
-      <h1>
-        DEFINE<br>
-        YOUR<br>
-        <span class="outline">OWN</span><br>
-        LOOK.
-      </h1>
+          <h1>
+            YOUR HAIR.<br>
+            YOUR <span>RULES.</span>
+          </h1>
 
-      <p class="hero-copy">
-        Premium hair for people who don't do ordinary.
-        Precision, texture and versatility — made for your
-        own version of confidence. No rules. No boxes.
-      </p>
+          <p class="hero-copy">
+            Twists, braids and protective styles made to express
+            who you are. Come as you are. Leave with a look that
+            feels completely yours.
+          </p>
 
-      <div class="actions">
-        <a class="primary-btn" href="#shop">
-          Explore the collection <span>↗</span>
-        </a>
-        <a class="text-link" href="#about">Our philosophy ↓</a>
+          <div class="hero-actions">
+            <a href="#booking" class="btn">Book Your Appointment ↗</a>
+            <a href="#services" class="btn btn-outline">Explore Services</a>
+          </div>
+
+          <p class="hero-note">
+            <strong>✳ ALL TEXTURES. ALL IDENTITIES.</strong><br>
+            Your style, your way.
+          </p>
+        </div>
+
+        <div class="hero-visual">
+          <img
+            class="hero-image"
+            src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=1000&q=85"
+            alt="Fashion editorial portrait representing individual style"
+            fetchpriority="high">
+
+          <div class="hero-label">
+            MADE FOR YOU.
+            <small>Protective styling, without limits.</small>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- MARQUEE -->
+    <div class="marquee" aria-label="Braids, twists, confidence and creativity">
+      <div class="marquee-track">
+        <span>Twists</span>
+        <span>Braids</span>
+        <span>Cornrows</span>
+        <span>Protective Styles</span>
+        <span>Your Identity</span>
       </div>
     </div>
 
-    <div class="hero-visual">
-      <img
-        class="hero-photo"
-        src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=1000&q=90"
-        alt="Editorial portrait highlighting individual style">
+    <!-- SERVICES -->
+    <section class="section" id="services">
+      <div class="container">
 
-      <div class="photo-overlay"></div>
+        <div class="section-heading">
+          <div>
+            <div class="eyebrow">The service menu</div>
+            <h2>FIND YOUR<br> NEXT LOOK.</h2>
+            <p>
+              From everyday protective styles to detailed statement
+              looks, choose the style that fits your personality.
+            </p>
+          </div>
 
-      <div class="hero-tag">VOL. 001 — THE INDIVIDUAL</div>
+          <a href="#booking" class="btn btn-outline">Book a Service ↗</a>
+        </div>
 
-      <div class="hero-caption">NOT HERE TO FIT IN.</div>
+        <div class="services-grid">
 
-      <div class="hero-number">001</div>
-    </div>
-  </div>
-</section>
+          <article class="service-card">
+            <img
+              class="service-image"
+              src="https://images.unsplash.com/photo-1605980776566-0486c3ac7617?auto=format&fit=crop&w=800&q=85"
+              alt="Braided hairstyle inspiration"
+              loading="lazy">
 
-<div class="ticker" aria-label="Brand message">
-  <div class="ticker-track">
-    <span>
-      NO RULES <b>✳</b>
-      NO BOXES <b>✳</b>
-      JUST YOUR STYLE <b>✳</b>
-      BUILT DIFFERENT <b>✳</b>
-      DEFINE YOUR LOOK <b>✳</b>
-    </span>
-    <span aria-hidden="true">
-      NO RULES <b>✳</b>
-      NO BOXES <b>✳</b>
-      JUST YOUR STYLE <b>✳</b>
-      BUILT DIFFERENT <b>✳</b>
-      DEFINE YOUR LOOK <b>✳</b>
-    </span>
-  </div>
-</div>
+            <div class="service-body">
+              <div class="service-top">
+                <h3>Box Braids</h3>
+                <span class="price">From £60</span>
+              </div>
 
-<section class="section" id="shop">
-  <div class="section-inner">
+              <p>
+                Classic individual braids with a clean finish.
+                Choose your preferred length, size and overall look.
+              </p>
 
-    <div class="section-heading">
-      <div>
-        <div class="kicker">01 / The collection</div>
-        <h2>FIND YOUR<br><span class="light">SIGNATURE.</span></h2>
+              <div class="service-meta">
+                <span>⏱ 3–6 hours</span>
+                <span>Protective style</span>
+              </div>
+
+              <button class="btn book-service" data-service="Box Braids">
+                Book this style ↗
+              </button>
+            </div>
+          </article>
+
+          <article class="service-card">
+            <img
+              class="service-image"
+              src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?auto=format&fit=crop&w=800&q=85"
+              alt="Natural hair and beauty inspiration"
+              loading="lazy">
+
+            <div class="service-body">
+              <div class="service-top">
+                <h3>Two-Strand Twists</h3>
+                <span class="price">From £35</span>
+              </div>
+
+              <p>
+                A versatile twist style for natural hair.
+                Available in different sizes and lengths.
+              </p>
+
+              <div class="service-meta">
+                <span>⏱ 1.5–4 hours</span>
+                <span>Natural hair</span>
+              </div>
+
+              <button class="btn book-service" data-service="Two-Strand Twists">
+                Book this style ↗
+              </button>
+            </div>
+          </article>
+
+          <article class="service-card">
+            <img
+              class="service-image"
+              src="https://images.unsplash.com/photo-1595152772835-219674b2a8a6?auto=format&fit=crop&w=800&q=85"
+              alt="Personal style and hair inspiration"
+              loading="lazy">
+
+            <div class="service-body">
+              <div class="service-top">
+                <h3>Cornrows</h3>
+                <span class="price">From £25</span>
+              </div>
+
+              <p>
+                Clean straight-back cornrows, stitch designs
+                and creative patterns tailored to your preference.
+              </p>
+
+              <div class="service-meta">
+                <span>⏱ 1–3 hours</span>
+                <span>Custom designs</span>
+              </div>
+
+              <button class="btn book-service" data-service="Cornrows">
+                Book this style ↗
+              </button>
+            </div>
+          </article>
+
+          <article class="service-card">
+            <img
+              class="service-image"
+              src="https://images.unsplash.com/photo-1582095133179-bfd08e2fc6b3?auto=format&fit=crop&w=800&q=85"
+              alt="Protective hairstyle inspiration"
+              loading="lazy">
+
+            <div class="service-body">
+              <div class="service-top">
+                <h3>Knotless Braids</h3>
+                <span class="price">From £70</span>
+              </div>
+
+              <p>
+                A lightweight braid option with a natural-looking
+                finish. Discuss your ideal size and length.
+              </p>
+
+              <div class="service-meta">
+                <span>⏱ 4–7 hours</span>
+                <span>Protective style</span>
+              </div>
+
+              <button class="btn book-service" data-service="Knotless Braids">
+                Book this style ↗
+              </button>
+            </div>
+          </article>
+
+          <article class="service-card">
+            <img
+              class="service-image"
+              src="https://images.unsplash.com/photo-1519699047748-de8e457a634e?auto=format&fit=crop&w=800&q=85"
+              alt="Hair styling and personal grooming inspiration"
+              loading="lazy">
+
+            <div class="service-body">
+              <div class="service-top">
+                <h3>Passion Twists</h3>
+                <span class="price">From £65</span>
+              </div>
+
+              <p>
+                Textured, expressive twists for a relaxed or
+                statement-making finish.
+              </p>
+
+              <div class="service-meta">
+                <span>⏱ 3–6 hours</span>
+                <span>Protective style</span>
+              </div>
+
+              <button class="btn book-service" data-service="Passion Twists">
+                Book this style ↗
+              </button>
+            </div>
+          </article>
+
+          <article class="service-card">
+            <img
+              class="service-image"
+              src="https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?auto=format&fit=crop&w=800&q=85"
+              alt="Individual hairstyle inspiration"
+              loading="lazy">
+
+            <div class="service-body">
+              <div class="service-top">
+                <h3>Custom Styles</h3>
+                <span class="price">Get a quote</span>
+              </div>
+
+              <p>
+                Have an inspiration photo or a style of your own?
+                Let's discuss a look created around you.
+              </p>
+
+              <div class="service-meta">
+                <span>⏱ Varies</span>
+                <span>Personalised</span>
+              </div>
+
+              <button class="btn book-service" data-service="Custom Style">
+                Discuss your style ↗
+              </button>
+            </div>
+          </article>
+
+        </div>
+
+        <p class="price-note">
+          * Prices and appointment times are examples. Replace them
+          with your actual service prices. Final costs may depend
+          on hair length, braid size, extensions and styling complexity.
+        </p>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="section about" id="about">
+      <div class="container about-grid">
+
+        <div class="about-image-wrap">
+          <img
+            class="about-image"
+            src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=900&q=85"
+            alt="Portrait representing individuality and personal expression"
+            loading="lazy">
+
+          <div class="about-stamp">
+            YOUR<br>STYLE.<br>YOUR WAY.
+          </div>
+        </div>
+
+        <div class="about-copy">
+          <div class="eyebrow">More than a hairstyle</div>
+
+          <h2>GOOD HAIR.<br>GOOD ENERGY.</h2>
+
+          <p>
+            At VIOLET RIOT, hairstyling is about more than the final
+            look. It's about self-expression, feeling comfortable
+            in your identity and finding a style that works for you.
+          </p>
+
+          <p>
+            Whether you want neat cornrows, defined twists, classic
+            braids or something completely different, the goal is
+            simple: create a look that feels like you.
+          </p>
+
+          <div class="values">
+            <div class="value">
+              <strong>01 / Your Identity</strong>
+              <span>No boxes. No expectations. Just your style.</span>
+            </div>
+
+            <div class="value">
+              <strong>02 / The Details</strong>
+              <span>Careful sectioning and attention to the finish.</span>
+            </div>
+
+            <div class="value">
+              <strong>03 / Your Comfort</strong>
+              <span>A style planned around your preferences.</span>
+            </div>
+
+            <div class="value">
+              <strong>04 / Your Inspiration</strong>
+              <span>Bring your photos and ideas to the consultation.</span>
+            </div>
+          </div>
+
+          <a href="#booking" class="btn">Let's Create Your Look ↗</a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- GALLERY -->
+    <section class="section" id="gallery">
+      <div class="container">
+
+        <div class="section-heading">
+          <div>
+            <div class="eyebrow">Style inspiration</div>
+            <h2>THE LOOKBOOK.</h2>
+            <p>
+              Explore different looks and find inspiration
+              for your next appointment.
+            </p>
+          </div>
+
+          <a href="#booking" class="btn btn-outline">Create Your Look ↗</a>
+        </div>
+
+        <div class="gallery-grid">
+
+          <div class="gallery-item">
+            <img
+              src="https://images.unsplash.com/photo-1605980776566-0486c3ac7617?auto=format&fit=crop&w=800&q=85"
+              alt="Braided hairstyle inspiration"
+              loading="lazy">
+            <div class="gallery-caption">Braids</div>
+          </div>
+
+          <div class="gallery-item">
+            <img
+              src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?auto=format&fit=crop&w=700&q=85"
+              alt="Personal style inspiration"
+              loading="lazy">
+            <div class="gallery-caption">Natural Texture</div>
+          </div>
+
+          <div class="gallery-item">
+            <img
+              src="https://images.unsplash.com/photo-1595152772835-219674b2a8a6?auto=format&fit=crop&w=700&q=85"
+              alt="Contemporary personal style"
+              loading="lazy">
+            <div class="gallery-caption">Individual Style</div>
+          </div>
+
+          <div class="gallery-item">
+            <img
+              src="https://images.unsplash.com/photo-1582095133179-bfd08e2fc6b3?auto=format&fit=crop&w=700&q=85"
+              alt="Hair and beauty inspiration"
+              loading="lazy">
+            <div class="gallery-caption">Protective Styles</div>
+          </div>
+
+          <div class="gallery-item">
+            <img
+              src="https://images.unsplash.com/photo-1519699047748-de8e457a634e?auto=format&fit=crop&w=700&q=85"
+              alt="Hair styling inspiration"
+              loading="lazy">
+            <div class="gallery-caption">Your Next Look</div>
+          </div>
+
+        </div>
+
+        <p class="price-note">
+          These are illustrative image references. Replace them with
+          your own hairstyle photos for an accurate portfolio of your work.
+        </p>
+      </div>
+    </section>
+
+    <!-- BOOKING -->
+    <section class="section booking" id="booking">
+      <div class="container booking-grid">
+
+        <div class="booking-intro">
+          <div class="eyebrow">Your next appointment</div>
+
+          <h2>LET'S GET<br>YOU STYLED.</h2>
+
+          <p>
+            Tell us what look you're going for. Choose a service,
+            share your preferred date and leave any details that
+            will help us prepare.
+          </p>
+
+          <div class="booking-info">
+            <strong>✳ Choose your style</strong>
+            <span>Pick a service or request a custom look.</span>
+          </div>
+
+          <div class="booking-info">
+            <strong>✳ Share your preferences</strong>
+            <span>Tell us about your desired length, size and inspiration.</span>
+          </div>
+
+          <div class="booking-info">
+            <strong>✳ Confirm your appointment</strong>
+            <span>Your booking needs to be confirmed by the stylist.</span>
+          </div>
+        </div>
+
+        <form class="booking-form" id="bookingForm">
+
+          <div class="form-heading">
+            <h3>Request an appointment</h3>
+            <p>Complete the details below to prepare your booking request.</p>
+          </div>
+
+          <div class="form-grid">
+
+            <div class="field">
+              <label for="name">Full name *</label>
+              <input
+                id="name"
+                name="name"
+                type="text"
+                autocomplete="name"
+                placeholder="Your name"
+                required>
+            </div>
+
+            <div class="field">
+              <label for="email">Email address *</label>
+              <input
+                id="email"
+                name="email"
+                type="email"
+                autocomplete="email"
+                placeholder="you@example.com"
+                required>
+            </div>
+
+            <div class="field">
+              <label for="phone">Phone number</label>
+              <input
+                id="phone"
+                name="phone"
+                type="tel"
+                autocomplete="tel"
+                placeholder="Your contact number">
+            </div>
+
+            <div class="field">
+              <label for="service">Choose a service *</label>
+              <select id="service" name="service" required>
+                <option value="">Select a hairstyle</option>
+                <option>Box Braids</option>
+                <option>Two-Strand Twists</option>
+                <option>Cornrows</option>
+                <option>Knotless Braids</option>
+                <option>Passion Twists</option>
+                <option>Custom Style</option>
+                <option>Other / Not Sure Yet</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label for="date">Preferred date *</label>
+              <input id="date" name="date" type="date" required>
+            </div>
+
+            <div class="field">
+              <label for="time">Preferred time</label>
+              <select id="time" name="time">
+                <option value="">Flexible</option>
+                <option>Morning</option>
+                <option>Afternoon</option>
+                <option>Evening</option>
+              </select>
+            </div>
+
+            <div class="field full">
+              <label for="length">Desired length</label>
+              <select id="length" name="length">
+                <option value="">Choose if applicable</option>
+                <option>Short</option>
+                <option>Shoulder length</option>
+                <option>Mid-back</option>
+                <option>Waist length</option>
+                <option>Extra long</option>
+                <option>Not sure yet</option>
+              </select>
+            </div>
+
+            <div class="field full">
+              <label for="details">Tell us about your style</label>
+              <textarea
+                id="details"
+                name="details"
+                placeholder="Your inspiration, preferred braid size, hair length, extension preferences or anything else we should know..."></textarea>
+            </div>
+
+          </div>
+
+          <button class="btn form-submit" type="submit">
+            Prepare Booking Request ↗
+          </button>
+
+          <p class="form-disclaimer">
+            This demo form does not transmit or save your information.
+            Connect a booking service or backend before accepting real bookings.
+          </p>
+
+          <div class="form-status" id="formStatus" role="status" aria-live="polite"></div>
+
+        </form>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section" id="faq">
+      <div class="container">
+
+        <div class="section-heading">
+          <div>
+            <div class="eyebrow">Good to know</div>
+            <h2>THE DETAILS.</h2>
+            <p>Some useful information before you book.</p>
+          </div>
+        </div>
+
+        <div class="faq-list">
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>Do I need to bring my own extensions?</span>
+              <span>+</span>
+            </button>
+            <div class="faq-answer">
+              <p>
+                This depends on the service. Ask the stylist before your
+                appointment whether extensions are included or need to
+                be purchased separately.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>How should I prepare my hair?</span>
+              <span>+</span>
+            </button>
+            <div class="faq-answer">
+              <p>
+                Preparation depends on the hairstyle. You will usually
+                want to discuss washing, detangling and stretching your
+                hair with your stylist before the appointment.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>Can I request a style that isn't listed?</span>
+              <span>+</span>
+            </button>
+            <div class="faq-answer">
+              <p>
+                Absolutely. Select Custom Style in the booking form and
+                describe your idea. Include an inspiration photo when
+                you contact the stylist.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>Are the prices fixed?</span>
+              <span>+</span>
+            </button>
+            <div class="faq-answer">
+              <p>
+                The prices shown are examples. Your final price may vary
+                depending on style, hair length, size, extensions and
+                time required. Confirm the price before booking.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              <span>Is the service open to everyone?</span>
+              <span>+</span>
+            </button>
+            <div class="faq-answer">
+              <p>
+                The brand is designed to be welcoming and individual.
+                Service suitability depends on the requested style,
+                hair type and the stylist's experience.
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+
+      <div class="footer-main">
+
+        <div class="footer-brand">
+          <a href="#home" class="logo">VIOLET<span>RIOT.</span></a>
+          <p>
+            Braids, twists and protective styles.
+            Personal expression starts with your hair.
+          </p>
+        </div>
+
+        <div class="footer-links">
+          <h4>Explore</h4>
+          <a href="#services">Services</a>
+          <a href="#gallery">Lookbook</a>
+          <a href="#about">About Us</a>
+          <a href="#faq">FAQs</a>
+        </div>
+
+        <div class="footer-links">
+          <h4>Appointments</h4>
+          <a href="#booking">Request a Booking</a>
+          <a href="#services">Service Menu</a>
+          <a href="#booking">Custom Styles</a>
+        </div>
+
+        <div class="footer-links">
+          <h4>Find Us</h4>
+          <!-- Replace these placeholders with real business details -->
+          <a href="#booking">Your town or city</a>
+          <a href="mailto:hello@example.com">hello@example.com</a>
+          <a href="#booking">Appointment only</a>
+        </div>
+
       </div>
 
-      <p class="section-intro">
-        Considered textures. Statement lengths. Everyday essentials.
-        Pieces chosen to work with your look, not define it for you.
-      </p>
-    </div>
-
-    <div class="filters" role="group" aria-label="Filter products">
-      <button class="filter active" data-filter="all" aria-pressed="true">All pieces</button>
-      <button class="filter" data-filter="bundles" aria-pressed="false">Bundles</button>
-      <button class="filter" data-filter="wigs" aria-pressed="false">Wigs</button>
-      <button class="filter" data-filter="ponytails" aria-pressed="false">Ponytails</button>
-      <button class="filter" data-filter="accessories" aria-pressed="false">Accessories</button>
-    </div>
-
-    <div class="products">
-
-      <article class="product" data-category="bundles">
-        <div class="product-image">
-          <span class="product-label">01 / THE ESSENTIAL</span>
-          <img
-            src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=700&q=85"
-            alt="Editorial portrait for the Core Texture collection"
-            loading="lazy">
-          <span class="product-index">VR—001</span>
-        </div>
-
-        <div class="product-info">
-          <div class="product-meta">
-            <h3>Core Texture Bundles</h3>
-            <span class="price">$89</span>
-          </div>
-          <p class="product-desc">
-            Versatile texture. Natural movement. A foundation for your own look.
-          </p>
-          <button class="add-btn" data-name="Core Texture Bundles" data-price="89">
-            Add to bag +
-          </button>
-        </div>
-      </article>
-
-      <article class="product" data-category="wigs">
-        <div class="product-image">
-          <span class="product-label">02 / THE STATEMENT</span>
-          <img
-            src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=700&q=85"
-            alt="Editorial portrait for the Form One wig collection"
-            loading="lazy">
-          <span class="product-index">VR—002</span>
-        </div>
-
-        <div class="product-info">
-          <div class="product-meta">
-            <h3>Form One Wig</h3>
-            <span class="price">$149</span>
-          </div>
-          <p class="product-desc">
-            Clean finish. Defined silhouette. A look that holds its own.
-          </p>
-          <button class="add-btn" data-name="Form One Wig" data-price="149">
-            Add to bag +
-          </button>
-        </div>
-      </article>
-
-      <article class="product" data-category="ponytails">
-        <div class="product-image">
-          <span class="product-label">03 / THE QUICK FIX</span>
-          <img
-            src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=700&q=85"
-            alt="Fashion portrait for the Shift ponytail collection"
-            loading="lazy">
-          <span class="product-index">VR—003</span>
-        </div>
-
-        <div class="product-info">
-          <div class="product-meta">
-            <h3>Shift Ponytail</h3>
-            <span class="price">$49</span>
-          </div>
-          <p class="product-desc">
-            Low effort. Strong finish. An instant change of direction.
-          </p>
-          <button class="add-btn" data-name="Shift Ponytail" data-price="49">
-            Add to bag +
-          </button>
-        </div>
-      </article>
-
-      <article class="product" data-category="accessories">
-        <div class="product-image">
-          <span class="product-label">04 / THE DETAILS</span>
-          <img
-            src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=700&q=85"
-            alt="Editorial fashion portrait for the Finish accessories collection"
-            loading="lazy">
-          <span class="product-index">VR—004</span>
-        </div>
-
-        <div class="product-info">
-          <div class="product-meta">
-            <h3>Finish Accessories</h3>
-            <span class="price">$24</span>
-          </div>
-          <p class="product-desc">
-            Functional details. Refined finishes. The final ten per cent.
-          </p>
-          <button class="add-btn" data-name="Finish Accessories" data-price="24">
-            Add to bag +
-          </button>
-        </div>
-      </article>
-
-    </div>
-  </div>
-</section>
-
-<section class="section manifesto" id="about">
-  <div class="manifesto-inner">
-    <div class="manifesto-art" aria-hidden="true">
-      <div class="manifesto-symbol">VR.</div>
-    </div>
-
-    <div class="manifesto-copy">
-      <div class="kicker">02 / The concept</div>
-
-      <h2>
-        STYLE IS<br>
-        <span class="light">PERSONAL.</span>
-      </h2>
-
-      <p>
-        VIOLET RIOT exists for one reason: self-expression shouldn't
-        come with a rulebook. Hair can change a silhouette, shift an
-        attitude or completely reinvent a look.
-      </p>
-
-      <p>
-        Our world is built around texture, versatility and individuality.
-        No assumptions about who you are or how you should look.
-        Choose what works for you. Make it yours.
-      </p>
-
-      <a class="primary-btn" href="#shop">
-        Explore the collection ↗
-      </a>
-    </div>
-  </div>
-</section>
-
-<section class="values" id="values">
-  <article class="value">
-    <div class="value-index">01 — PRINCIPLE</div>
-    <h3>Individuality first.</h3>
-    <p>
-      Your look belongs to you. We provide the pieces;
-      you decide what they become.
-    </p>
-  </article>
-
-  <article class="value">
-    <div class="value-index">02 — APPROACH</div>
-    <h3>Details matter.</h3>
-    <p>
-      Texture, movement, finish and versatility are
-      what separate a good look from a great one.
-    </p>
-  </article>
-
-  <article class="value">
-    <div class="value-index">03 — PHILOSOPHY</div>
-    <h3>No prescribed image.</h3>
-    <p>
-      There is no single way to wear great hair.
-      The best style is the one that feels like you.
-    </p>
-  </article>
-</section>
-
-<section class="newsletter" id="newsletter">
-  <div class="newsletter-inner">
-    <div>
-      <div class="kicker">03 / Stay in the loop</div>
-
-      <h2>
-        THE NEXT<br>
-        <span>CHAPTER.</span>
-      </h2>
-
-      <p>
-        New arrivals, collection updates and ideas worth keeping.
-        Straight to your inbox, without the noise.
-      </p>
-    </div>
-
-    <div>
-      <form class="newsletter-form" id="newsletterForm">
-        <input
-          type="email"
-          id="email"
-          placeholder="Email address"
-          aria-label="Email address"
-          autocomplete="email"
-          required>
-
-        <button type="submit">Sign me up ↗</button>
-      </form>
-
-      <div class="form-note" id="formNote">
-        Only the important things. Unsubscribe whenever you like.
+      <div class="footer-bottom">
+        <span>© <span id="year"></span> VIOLET RIOT. All rights reserved.</span>
+        <span>Individual style. No limits.</span>
       </div>
+
     </div>
-  </div>
-</section>
+  </footer>
 
-</main>
+  <script>
+    // MOBILE NAVIGATION
+    const menuToggle = document.getElementById("menuToggle");
+    const navLinks = document.getElementById("navLinks");
 
-<footer>
-  <div class="footer-inner">
-    <a href="#home" class="footer-logo">VIOLET <span>RIOT®</span></a>
-
-    <div class="footer-links">
-      <a href="#shop">Shop</a>
-      <a href="#about">Our concept</a>
-      <a href="#values">Our standard</a>
-      <a href="#newsletter">Updates</a>
-      <a href="#home">Back to top ↑</a>
-    </div>
-
-    <div class="footer-bottom">
-      <span>© 2026 VIOLET RIOT. ALL RIGHTS RESERVED.</span>
-      <span>INDIVIDUAL STYLE. NO RULES.</span>
-    </div>
-  </div>
-</footer>
-
-<div class="backdrop" id="backdrop"></div>
-
-<aside
-  class="cart-panel"
-  id="cartPanel"
-  role="dialog"
-  aria-modal="true"
-  aria-label="Shopping bag"
-  aria-hidden="true">
-
-  <div class="cart-head">
-    <h2>YOUR BAG.</h2>
-    <button class="close-cart" id="closeCart">CLOSE ✕</button>
-  </div>
-
-  <div class="cart-items" id="cartItems">
-    <p class="cart-empty">
-      Nothing here yet.<br>
-      Find something that fits your style.
-    </p>
-  </div>
-
-  <div class="cart-total">
-    <div class="total-line">
-      <span>SUBTOTAL</span>
-      <span id="cartTotal">$0.00</span>
-    </div>
-
-    <button class="checkout-btn" id="checkoutBtn">
-      Continue to checkout ↗
-    </button>
-
-    <p class="checkout-note">
-      Demo storefront: payments and order processing have not been connected.
-    </p>
-  </div>
-</aside>
-
-<div class="toast" id="toast" role="status" aria-live="polite"></div>
-
-<script>
-const cart = [];
-
-const $ = selector => document.querySelector(selector);
-const $$ = selector => [...document.querySelectorAll(selector)];
-
-let toastTimer;
-let lastFocusedElement = null;
-
-function toast(message) {
-  const element = $("#toast");
-  element.textContent = message;
-  element.classList.add("show");
-
-  clearTimeout(toastTimer);
-
-  toastTimer = setTimeout(() => {
-    element.classList.remove("show");
-  }, 2600);
-}
-
-/* FILTER PRODUCTS */
-
-$$(".filter").forEach(button => {
-  button.addEventListener("click", () => {
-    const category = button.dataset.filter;
-
-    $$(".filter").forEach(filter => {
-      const active = filter === button;
-      filter.classList.toggle("active", active);
-      filter.setAttribute("aria-pressed", String(active));
+    menuToggle.addEventListener("click", () => {
+      const isOpen = navLinks.classList.toggle("active");
+      menuToggle.setAttribute("aria-expanded", String(isOpen));
+      menuToggle.setAttribute(
+        "aria-label",
+        isOpen ? "Close navigation" : "Open navigation"
+      );
+      menuToggle.textContent = isOpen ? "✕" : "☰";
     });
 
-    $$(".product").forEach(product => {
-      product.hidden =
-        category !== "all" && product.dataset.category !== category;
-    });
-  });
-});
-
-/* SHOPPING BAG */
-
-function renderCart() {
-  const count = cart.reduce((sum, item) => sum + item.qty, 0);
-  const total = cart.reduce((sum, item) => sum + item.price * item.qty, 0);
-
-  $("#bagCount").textContent = count;
-  $("#cartTotal").textContent = "$" + total.toFixed(2);
-
-  const container = $("#cartItems");
-  container.replaceChildren();
-
-  if (cart.length === 0) {
-    const empty = document.createElement("p");
-    empty.className = "cart-empty";
-    empty.textContent = "Nothing here yet. Find something that fits your style.";
-    container.append(empty);
-    return;
-  }
-
-  cart.forEach((item, index) => {
-    const row = document.createElement("div");
-    row.className = "cart-row";
-
-    const details = document.createElement("div");
-    const name = document.createElement("div");
-
-    name.textContent = item.name + " × " + item.qty;
-
-    const remove = document.createElement("button");
-    remove.className = "remove-btn";
-    remove.textContent = "Remove item";
-    remove.type = "button";
-
-    remove.addEventListener("click", () => {
-      cart.splice(index, 1);
-      renderCart();
+    navLinks.querySelectorAll("a").forEach(link => {
+      link.addEventListener("click", () => {
+        navLinks.classList.remove("active");
+        menuToggle.setAttribute("aria-expanded", "false");
+        menuToggle.setAttribute("aria-label", "Open navigation");
+        menuToggle.textContent = "☰";
+      });
     });
 
-    details.append(name, remove);
+    // SERVICE BUTTONS: select the chosen hairstyle and go to booking
+    document.querySelectorAll(".book-service").forEach(button => {
+      button.addEventListener("click", () => {
+        const serviceSelect = document.getElementById("service");
+        const service = button.dataset.service;
 
-    const price = document.createElement("span");
-    price.textContent = "$" + (item.price * item.qty).toFixed(2);
+        for (const option of serviceSelect.options) {
+          if (option.value === service || option.text === service) {
+            serviceSelect.value = option.value || option.text;
+            break;
+          }
+        }
 
-    row.append(details, price);
-    container.append(row);
-  });
-}
+        document.getElementById("booking").scrollIntoView({
+          behavior: "smooth"
+        });
+      });
+    });
 
-$$(".add-btn").forEach(button => {
-  button.addEventListener("click", () => {
-    const name = button.dataset.name;
-    const price = Number(button.dataset.price);
+    // DATE PICKER: prevent selecting a date in the past
+    const dateInput = document.getElementById("date");
+    const today = new Date();
+    const localToday = new Date(
+      today.getTime() - today.getTimezoneOffset() * 60000
+    ).toISOString().split("T")[0];
 
-    const existing = cart.find(item => item.name === name);
+    dateInput.min = localToday;
 
-    if (existing) {
-      existing.qty++;
-    } else {
-      cart.push({ name, price, qty: 1 });
-    }
+    // FAQ ACCORDION
+    document.querySelectorAll(".faq-question").forEach(button => {
+      button.addEventListener("click", () => {
+        const item = button.closest(".faq-item");
+        const isOpen = item.classList.toggle("open");
 
-    renderCart();
-    toast("Added to your bag: " + name);
-  });
-});
+        button.setAttribute("aria-expanded", String(isOpen));
+        button.querySelector("span:last-child").textContent =
+          isOpen ? "−" : "+";
+      });
+    });
 
-/* CART DRAWER */
+    // DEMO BOOKING FORM
+    // This validates the form locally but does not send or store data.
+    const bookingForm = document.getElementById("bookingForm");
+    const formStatus = document.getElementById("formStatus");
 
-const panel = $("#cartPanel");
-const backdrop = $("#backdrop");
+    bookingForm.addEventListener("submit", event => {
+      event.preventDefault();
 
-function openCart() {
-  lastFocusedElement = document.activeElement;
+      if (!bookingForm.reportValidity()) return;
 
-  panel.classList.add("open");
-  backdrop.classList.add("show");
-  panel.setAttribute("aria-hidden", "false");
+      const data = new FormData(bookingForm);
+      const name = data.get("name");
+      const service = data.get("service");
+      const date = data.get("date");
 
-  $("#closeCart").focus();
-}
+      formStatus.style.display = "block";
+      formStatus.textContent =
+        `Thanks, ${name}! Your request for ${service} on ${date} ` +
+        "has been prepared in this demo. No booking has been sent. " +
+        "Connect a booking system to receive real appointment requests.";
 
-function closeCart() {
-  panel.classList.remove("open");
-  backdrop.classList.remove("show");
-  panel.setAttribute("aria-hidden", "true");
+      formStatus.scrollIntoView({
+        behavior: "smooth",
+        block: "nearest"
+      });
+    });
 
-  if (lastFocusedElement) {
-    lastFocusedElement.focus();
-  } else {
-    $("#openCart").focus();
-  }
-}
-
-$("#openCart").addEventListener("click", openCart);
-$("#closeCart").addEventListener("click", closeCart);
-backdrop.addEventListener("click", closeCart);
-
-document.addEventListener("keydown", event => {
-  if (event.key === "Escape" && panel.classList.contains("open")) {
-    closeCart();
-  }
-});
-
-$("#checkoutBtn").addEventListener("click", () => {
-  if (cart.length === 0) {
-    toast("Your bag is empty.");
-  } else {
-    toast("Checkout is not connected to a payment provider yet.");
-  }
-});
-
-/* NEWSLETTER DEMO */
-
-$("#newsletterForm").addEventListener("submit", event => {
-  event.preventDefault();
-
-  const email = $("#email").value.trim();
-
-  if (!email) return;
-
-  $("#formNote").textContent =
-    "Thanks for your interest. Connect an email service to save subscriptions.";
-
-  $("#email").value = "";
-  toast("Thanks for joining the Violet Riot updates list.");
-});
-</script>
+    // CURRENT YEAR
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+  </script>
 
 </body>
 </html>
